@@ -1,0 +1,240 @@
+.cards-container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+    position: relative;
+    top: 2rem;
+}
+
+.cards-container .card {
+    border-radius: 0.25rem;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+}
+
+.card .thumbnail {
+    width: 100%;
+}
+
+.card .post-details-container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    width: 94%;
+    padding: 1rem 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.card .post-action-btn{
+    cursor: pointer;
+}
+
+.post-details-container .post-type {
+    font-size: 1.125rem;
+}
+
+.post-details-container .post-demo {
+    font-size: 1.1875rem;
+    color: #5C5C5C;
+}
+
+.post-details {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.post-details .creater {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-details .creater .creater-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.post-details .creater .name {
+    font-size: 1.125rem;
+}
+
+.post-details .post-views-and-share-details {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.post-details .post-views-and-share-details .post-views-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 0.5rem;
+    align-content: center;
+    align-items: center;
+}
+.post-details .mobile.post-view-count{
+    display: none;
+}
+.post-details .share-post-btn{
+    border-radius: 0.25rem;
+}
+.post-details .share-post-btn p{
+    display: none;
+}
+
+.post-details .share-post-btn img {
+    position: relative;
+    left: 100%;
+    top: 50%;
+    padding: 0.5rem 0.7rem;
+    transform: translate(-100%, -50%);
+    background: #EDEEF0;
+    border-radius: 0.125rem;
+    cursor: pointer;
+}
+
+.post-details-container .post-action-btn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 94%;
+    height: 2.375rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    border: 0.7px solid #A9AEB8;
+    background: #FFF;
+    font-weight: 600;
+}
+
+.orange-text {
+    color: #E56135;
+
+}
+
+.green-text {
+    color: #02B875;
+}
+
+.post-heading-container {
+    font-size: 1.375rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: auto 1.75rem;
+    justify-content: space-between;
+}
+
+.post-heading-container .options-btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+.post-heading-container .options-btn svg {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+.post-heading-container .options-btn:hover img {
+    border-radius: 0.125rem;
+    background: #BFBFC0;
+}
+
+.post-sub-heading-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 5rem;
+}
+
+.post-sub-heading-container .post-sub-heading {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 0.3rem;
+}
+
+.option-container {
+    position: fixed;
+    left: -50%;
+    top: -50%;
+    width: 10rem;
+    align-items: center;
+    align-content: center;
+    border-radius: 0.25rem;
+    background: #FFF;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+    z-index: 5;
+    overflow: hidden;
+}
+
+.option-container div {
+    width: 100%;
+    height: 2rem;
+    padding-left: 1rem;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option-container div:hover {
+    background: #EDEEF0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .card{
+        width: 99%;
+        border: none;
+        background: #FFF;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+    }
+    .cards-container{
+        top: 0;
+        gap: 0.7rem;
+    }
+    .post-details{
+        justify-content: space-between;
+    }
+    .post-details .share-post-btn{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0.2rem;
+        width: 82px;
+        background: #EDEEF0;
+        align-items: center;
+        height: 2.25rem;
+        justify-content: center;
+    }
+    .post-details .share-post-btn p{
+        display: block;
+        margin: 0;
+    }
+    
+    .post-details .share-post-btn img {
+        padding: 0;
+        left: 0%;
+        top: 0%;
+        transform: translate(0,0)
+    }
+    .post-views-and-share-details{
+        display: grid;
+        align-items: center;
+    }
+    .post-details .post-views-and-share-details .post-views-container{
+        display: none;
+    }
+    
+    .post-details .mobile.post-view-count{
+        display: block;
+    }
+}

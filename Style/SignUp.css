@@ -1,0 +1,197 @@
+.sign-up-popup {
+    width: 50%;
+    min-width: 750px;
+    background: white;
+    position: fixed;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.sign-up-popup.active {
+    top: 50%;
+}
+
+.sign-up-popup-shadow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    transition: 0.3s;
+    display: none;
+}
+
+.sign-up-popup-shadow.active {
+    display: block;
+}
+
+.close-sign-up-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    position: fixed;
+    top: -5%;
+    right: 24%;
+    z-index: 20;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-sign-up-icon.active {
+    top: 5%;
+}
+
+.sign-up-msg {
+    padding: 1rem 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #EFFFF4;
+    color: #008A45;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.sign-up-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.sign-up {
+    width: 100%;
+}
+
+.sign-up .sign-up-heading {
+    font-size: 1.5rem;
+}
+
+.sign-up .sign-up-input-box-container {
+    background: #FFFFFF;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+}
+
+.sign-up .sign-up-input-box {
+    width: calc(100% - 2rem);
+    background: #F7F8FA;
+    outline: none;
+    border: 1px solid #D9D9DB;
+    padding: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sign-up-input-box-container .first-name {
+    border-radius: 0.125rem 0 0 0;
+}
+
+.sign-up-input-box-container .last-name {
+    border-radius: 0 0.125rem 0 0;
+}
+
+.sign-up-input-box-container .confirm-password {
+    border-radius: 0 0 0.125rem 0.125rem;
+}
+
+.sign-up-container .name-input-container,
+.sign-up-container .password-container {
+    display: grid;
+    grid-auto-flow: column;
+    background: #F7F8FA;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up-container .password-container {
+    width: 100%;
+    border: 1px solid #D9D9DB;
+}
+
+.sign-up-container .password-container .show-icon {
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sign-up-container .password-container .password {
+    border: none;
+}
+
+.sign-up .create-account-btn {
+    border-radius: 1.25rem;
+    background: #2F6CE5;
+    width: 100%;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.auth-sign-up {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    border-radius: 0.125rem;
+    border: 0.6px solid #D9D9DB;
+    background: #FFF;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.sign-up-image-container {
+    display: grid;
+    justify-content: end;
+    justify-items: end;
+    gap: 1.5rem;
+}
+
+.sign-in-link-text {
+    color: #2F6CE5;
+    cursor: pointer;
+}
+
+.sign-up-image-container .sign-up-text {
+    font-size: 0.8125rem;
+}
+
+.privacy-policy-text {
+    text-decoration: none;
+    color: #000000;
+    opacity: 0.6;
+    font-size: 0.6875rem;
+}

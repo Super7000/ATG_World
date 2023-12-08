@@ -1,0 +1,99 @@
+.tab-container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0;
+    margin-top: 2rem;
+}
+
+.tabs {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.tabs div {
+    padding: 0.8rem 0.8vw;
+    color: #8A8A8A;
+}
+
+.tabs div:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.btns {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem
+}
+
+.btns .post-btn,
+.btns .join-grp-btn {
+    display: grid;
+    gap: 0.5rem;
+    cursor: pointer;
+    height: 2.25rem;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    padding: 0 1rem;
+}
+
+.post-btn {
+    border-radius: 0.25rem;
+    background: #EDEEF0;
+    grid-template-columns: auto 1.375rem;
+    line-height: 100%;
+    color: black;
+}
+
+.post-btn div{
+    min-width: 50px;
+}
+
+.join-grp-btn {
+    border-radius: 0.25rem;
+    background: #2F6CE5;
+    line-height: 100%;
+    grid-auto-flow: column;
+    color: #fff;
+}
+.btns .post-btn.filter-btn{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    .tab-container{
+        width: 92%;
+        border: none;
+        margin: 0;
+        top: -2rem;
+    }
+    .tabs div:nth-child(n+2){
+        display: none;
+    }
+    .tabs div:nth-child(1){
+        font-weight: bold;
+        color: #000000;
+    }
+    .btns .post-btn{
+        display: none;
+    }
+    .btns .join-grp-btn{
+        display: none;
+    }
+    .btns .post-btn.filter-btn{
+        display: grid;
+        font-weight: 600;
+    }
+}

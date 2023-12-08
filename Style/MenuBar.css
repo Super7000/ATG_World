@@ -1,0 +1,80 @@
+.menubar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.5rem;
+    background: white;
+    display: grid;
+    grid-template-columns: auto 25% auto;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    z-index: 5;
+}
+
+.input-box-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.3125rem;
+    background: #F2F2F2;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1.375rem auto;
+}
+
+.input-box-container svg {
+    padding: 0 0.5rem;
+}
+
+.input-box-container input {
+    padding: 0 1rem 0 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box-container::placeholder {
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #5C5C5C;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.create-account-container {
+    height: 1.5rem;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.three-shapes {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    .menubar {
+        height: auto;
+        justify-content: end;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .logo,
+    .search-bar-container,
+    .account-container {
+        display: none;
+    }
+
+    .three-shapes {
+        position: relative;
+        right: 1rem;
+        display: block;
+    }
+}

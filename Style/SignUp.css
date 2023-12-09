@@ -288,7 +288,7 @@
         height: 1.5rem;
     }
 
-.sign-up-popup.sign-up-mode .mobile.privacy-policy-text {
+    .sign-up-popup.sign-up-mode .mobile.privacy-policy-text {
         display: grid;
         padding: 1rem 0;
         text-align: center;

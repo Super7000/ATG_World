@@ -63,9 +63,9 @@ document.querySelectorAll(".options-btn").forEach((optBtn) => {
 
 window.onscroll = () => {
     document.querySelector(".option-container").style.cssText = `display: none;`;
-    try{
+    try {
         document.querySelector(".options-btn.active").classList.remove("active");
-    } catch(err) {
+    } catch (err) {
 
     }
 }

@@ -57,7 +57,7 @@
     color: black;
 }
 
-.post-btn div{
+.post-btn div {
     min-width: 50px;
 }
 
@@ -68,33 +68,39 @@
     grid-auto-flow: column;
     color: #fff;
 }
-.btns .post-btn.filter-btn{
+
+.btns .post-btn.filter-btn {
     display: none;
 }
 
 @media only screen and (max-width: 768px) {
 
     /* For mobile phones: */
-    .tab-container{
+    .tab-container {
         width: 92%;
         border: none;
         margin: 0;
         top: -2rem;
     }
-    .tabs div:nth-child(n+2){
+
+    .tabs div:nth-child(n+2) {
         display: none;
     }
-    .tabs div:nth-child(1){
+
+    .tabs div:nth-child(1) {
         font-weight: bold;
         color: #000000;
     }
-    .btns .post-btn{
+
+    .btns .post-btn {
         display: none;
     }
-    .btns .join-grp-btn{
+
+    .btns .join-grp-btn {
         display: none;
     }
-    .btns .post-btn.filter-btn{
+
+    .btns .post-btn.filter-btn {
         display: grid;
         font-weight: 600;
     }

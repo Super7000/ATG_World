@@ -27,7 +27,7 @@
     transform: translate(-50%, 0);
 }
 
-.card .post-action-btn{
+.card .post-action-btn {
     cursor: pointer;
 }
 
@@ -77,13 +77,16 @@
     align-content: center;
     align-items: center;
 }
-.post-details .mobile.post-view-count{
+
+.post-details .mobile.post-view-count {
     display: none;
 }
-.post-details .share-post-btn{
+
+.post-details .share-post-btn {
     border-radius: 0.25rem;
 }
-.post-details .share-post-btn p{
+
+.post-details .share-post-btn p {
     display: none;
 }
 
@@ -101,7 +104,7 @@
 .post-details-container .post-action-btn {
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     width: 94%;
     height: 2.375rem;
     display: grid;
@@ -143,7 +146,9 @@
     top: 50%;
     transform: translate(-50%, -50%)
 }
-.post-heading-container .options-btn:hover img, .post-heading-container .options-btn.active img {
+
+.post-heading-container .options-btn:hover img,
+.post-heading-container .options-btn.active img {
     border-radius: 0.125rem;
     background: #BFBFC0;
 }
@@ -191,21 +196,25 @@
 
 
 @media only screen and (max-width: 768px) {
+
     /* For mobile phones: */
-    .card{
+    .card {
         width: 99%;
         border: none;
         background: #FFF;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
     }
-    .cards-container{
+
+    .cards-container {
         top: 0;
         gap: 0.7rem;
     }
-    .post-details{
+
+    .post-details {
         justify-content: space-between;
     }
-    .post-details .share-post-btn{
+
+    .post-details .share-post-btn {
         display: grid;
         grid-auto-flow: column;
         gap: 0.2rem;
@@ -215,26 +224,29 @@
         height: 2.25rem;
         justify-content: center;
     }
-    .post-details .share-post-btn p{
+
+    .post-details .share-post-btn p {
         display: block;
         margin: 0;
     }
-    
+
     .post-details .share-post-btn img {
         padding: 0;
         left: 0%;
         top: 0%;
-        transform: translate(0,0)
+        transform: translate(0, 0)
     }
-    .post-views-and-share-details{
+
+    .post-views-and-share-details {
         display: grid;
         align-items: center;
     }
-    .post-details .post-views-and-share-details .post-views-container{
+
+    .post-details .post-views-and-share-details .post-views-container {
         display: none;
     }
-    
-    .post-details .mobile.post-view-count{
+
+    .post-details .mobile.post-view-count {
         display: block;
     }
 }

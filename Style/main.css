@@ -184,18 +184,20 @@ body {
     align-items: center;
     cursor: pointer;
 }
+
 .recomandation-container .grp .follow-btn.followed {
     width: 4.5625rem;
-height: 1.5rem;
-background: #000;
-color: #fff
+    height: 1.5rem;
+    background: #000;
+    color: #fff
 }
-.recomandation-container .see-more-btn{
+
+.recomandation-container .see-more-btn {
     font-size: 0.75rem;
     color: #2F6CE5;
     display: grid;
     justify-content: end;
-margin-top: 4.5rem;
+    margin-top: 4.5rem;
 }
 
 .create-post-btn {

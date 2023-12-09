@@ -253,7 +253,7 @@ body {
         cursor: pointer;
     }
 
-    .recomandation-container {
+    .location-and-recomandation-container .recomandation-container {
         display: none;
     }
 }

@@ -3,16 +3,16 @@
     min-width: 750px;
     background: white;
     position: fixed;
-    top: 200%;
+    bottom: -200%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     z-index: 20;
     border-radius: 0.5rem;
     transition: 0.3s;
 }
 
 .sign-up-popup.active {
-    top: 50%;
+    bottom: 50%;
 }
 
 .sign-up-popup-shadow {
@@ -35,16 +35,20 @@
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     top: -5%;
-    right: 24%;
+    right: -1rem;
     z-index: 20;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .close-sign-up-icon.active {
-    top: 5%;
+    top: -2.5rem;
+}
+
+.close-sign-up-icon path {
+    fill: #FFFFFF;
 }
 
 .sign-up-msg {
@@ -113,6 +117,10 @@
     align-items: center;
 }
 
+.sign-up-container .name-input-container {
+    justify-content: stretch;
+}
+
 .sign-up-container .password-container {
     width: 100%;
     border: 1px solid #D9D9DB;
@@ -141,6 +149,22 @@
     outline: none;
     font-size: 0.875rem;
     margin: 1rem 0;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.sign-up .submit-btn-container {
+    display: block;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up .submit-btn-container u {
+    display: none;
+    font-size: 0.8125rem;
+    color: #495057;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -194,4 +218,88 @@
     color: #000000;
     opacity: 0.6;
     font-size: 0.6875rem;
+}
+
+.sign-up-popup.sign-up-mode .mobile.privacy-policy-text {
+    display: none;
+}
+
+
+.sign-up-popup.sign-up-mode .first-name,
+.sign-up-popup.sign-up-mode .last-name,
+.sign-up-popup.sign-up-mode .confirm-password,
+.sign-up-popup.sign-up-mode .privacy-policy-text {
+    display: block;
+}
+
+.sign-up-popup.sign-up-mode .forgot-password-link {
+    display: none;
+}
+
+.sign-up-popup.sign-in-mode .first-name,
+.sign-up-popup.sign-in-mode .last-name,
+.sign-up-popup.sign-in-mode .confirm-password,
+.sign-up-popup.sign-in-mode .privacy-policy-text {
+    display: none;
+}
+
+.sign-up-popup.sign-in-mode .forgot-password-link {
+    display: grid;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .sign-up-popup {
+        width: 100%;
+        height: 73%;
+        min-width: 0;
+        transform: translate(-50%, 0%);
+        border-radius: 0.5rem 0.5rem 0 0;
+
+    }
+
+    .sign-up-popup.active {
+        bottom: 0;
+    }
+
+    .sign-up-container {
+        display: block;
+    }
+
+    .sign-up-popup .sign-up-image-container {
+        display: none;
+    }
+
+    .sign-up-msg {
+        display: none;
+    }
+
+    .close-sign-up-icon.active {
+        top: 1.7rem;
+        right: 2.1rem;
+    }
+
+    .close-sign-up-icon path {
+        fill: #212529;
+    }
+
+    .close-sign-up-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+.sign-up-popup.sign-up-mode .mobile.privacy-policy-text {
+        display: grid;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .sign-up .submit-btn-container {
+        display: grid;
+    }
+
+    .sign-up .submit-btn-container u {
+        display: grid;
+
+    }
 }

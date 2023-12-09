@@ -123,44 +123,44 @@ body {
     font-size: 0.75rem;
 }
 
-.location-and-recomandation-container .recomandation-container {
+.location-and-recommendation-container .recommendation-container {
     margin-top: 2.5rem;
     align-items: center;
     display: grid;
     grid-auto-flow: row;
 }
 
-.location-and-recomandation-container .recomandation-container .recomandation-text {
+.location-and-recommendation-container .recommendation-container .recommendation-text {
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
     padding-left: 0.5rem;
 }
 
-.location-and-recomandation-container .recomandation-container .recomandation-text img {
+.location-and-recommendation-container .recommendation-container .recommendation-text img {
     padding-top: 0.1rem;
     padding-right: 0.5rem;
 }
 
-.recomandation-container .grps {
+.recommendation-container .grps {
     display: grid;
     grid-auto-flow: row;
     margin-top: 1rem;
 }
 
-.recomandation-container .grp div {
+.recommendation-container .grp div {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
 }
 
-.recomandation-container .grp .grp-profile {
+.recommendation-container .grp .grp-profile {
     justify-content: start;
     font-size: 0.875rem;
 
 }
 
-.recomandation-container .grp {
+.recommendation-container .grp {
     display: grid;
     grid-auto-flow: column;
     padding-left: 0.5rem;
@@ -169,12 +169,12 @@ body {
     justify-content: space-between;
 }
 
-.recomandation-container .grp .grp-profile img {
+.recommendation-container .grp .grp-profile img {
     border-radius: 50%;
     padding-right: 0.8rem;
 }
 
-.recomandation-container .grp .follow-btn {
+.recommendation-container .grp .follow-btn {
     width: 3.75rem;
     height: 1.5rem;
     border-radius: 0.875rem;
@@ -185,14 +185,14 @@ body {
     cursor: pointer;
 }
 
-.recomandation-container .grp .follow-btn.followed {
+.recommendation-container .grp .follow-btn.followed {
     width: 4.5625rem;
     height: 1.5rem;
     background: #000;
     color: #fff
 }
 
-.recomandation-container .see-more-btn {
+.recommendation-container .see-more-btn {
     font-size: 0.75rem;
     color: #2F6CE5;
     display: grid;
@@ -253,7 +253,7 @@ body {
         cursor: pointer;
     }
 
-    .location-and-recomandation-container .recomandation-container {
+    .location-and-recommendation-container .recommendation-container {
         display: none;
     }
 }

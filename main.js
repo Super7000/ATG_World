@@ -1,9 +1,12 @@
+/* Function to show and hide sign up popup box */ 
 function toggleSignUpPopup() {
     document.querySelector(".sign-up-popup").classList.toggle("active");
     document.querySelector(".sign-up-popup-shadow").classList.toggle("active");
     document.querySelector(".close-sign-up-icon").classList.toggle("active");
 }
 
+
+/* Function to toggle between sign up mode and Sign In mode */
 function toggleSignUp() {
     let signUpPopUp = document.querySelector(".sign-up-popup");
     if (signUpPopUp.classList.toString().indexOf("sign-up-mode") !== -1) {
@@ -33,6 +36,8 @@ function toggleSignUp() {
     }
 }
 
+
+/* function that execute onClickFuntion on click of each elements of arrayOfClassBtns*/
 function customClickListener(arrayOfClassOfBtns, onClickFuntion) {
     arrayOfClassOfBtns.forEach((className) => {
         document.querySelector(className).addEventListener("click", onClickFuntion);
@@ -47,13 +52,18 @@ customClickListener(arrayOfClassOfBtnsForSignUpPopUp, toggleSignUpPopup)
 let arrayOfClassOfBtnsForSignUpToggle = [".sign-up-text .sign-in-link-text", ".submit-btn-container u"];
 customClickListener(arrayOfClassOfBtnsForSignUpToggle, toggleSignUp)
 
+/* changing pen icon to cross icon when cursor is pesent in the location nput box*/
 document.querySelector(".location-input-box").addEventListener("focus", () => {
     document.querySelector(".location-right-icon").src = "Icons/crossWithoutBorder.svg";
 })
+
+/* changing cross icon to pen icon when cursor is not pesent in the location nput box*/
 document.querySelector(".location-input-box").addEventListener("focusout", () => {
     document.querySelector(".location-right-icon").src = "Icons/filledPen.svg";
 })
 
+
+/* funtion to make appear of option box when 3 dot option btn is clicked in each post*/
 document.querySelectorAll(".options-btn").forEach((optBtn) => {
     optBtn.addEventListener("click", (event) => {
         optBtn.classList.add("active");
@@ -61,6 +71,7 @@ document.querySelectorAll(".options-btn").forEach((optBtn) => {
     })
 })
 
+/* funtion to make disappear of option box when users scrolls*/
 window.onscroll = () => {
     document.querySelector(".option-container").style.cssText = `display: none;`;
     try {

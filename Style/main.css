@@ -252,4 +252,8 @@ body {
         align-items: center;
         cursor: pointer;
     }
+
+    .recomandation-container {
+        display: none;
+    }
 }

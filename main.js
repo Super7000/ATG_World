@@ -12,8 +12,8 @@ function toggleSignUp() {
     if (signUpPopUp.classList.toString().indexOf("sign-up-mode") !== -1) {
         signUpPopUp.classList.remove("sign-up-mode");
         signUpPopUp.classList.add("sign-in-mode");
-
-        if (screen.width <= 768) {
+        
+        if (window.innerWidth >= 768) {
             document.querySelector(".sign-up-heading").innerHTML = "Sign In";
         } else {
             document.querySelector(".sign-up-heading").innerHTML = "Welcome Back!";

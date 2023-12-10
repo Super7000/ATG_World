@@ -63,7 +63,7 @@ document.querySelector(".location-input-box").addEventListener("focusout", () =>
 })
 
 
-/* funtion to make appear of option box when 3 dot option btn is clicked in each post*/
+/* makeing appear of option box when 3 dot option btn is clicked in each post*/
 document.querySelectorAll(".options-btn").forEach((optBtn) => {
     optBtn.addEventListener("click", (event) => {
         optBtn.classList.add("active");
@@ -71,7 +71,7 @@ document.querySelectorAll(".options-btn").forEach((optBtn) => {
     })
 })
 
-/* funtion to make disappear of option box when users scrolls*/
+/* makeing disappear of option box when users scrolls*/
 window.onscroll = () => {
     document.querySelector(".option-container").style.cssText = `display: none;`;
     try {
@@ -80,3 +80,15 @@ window.onscroll = () => {
 
     }
 }
+
+/* makeing tabs active on click */
+document.querySelectorAll(".tabs div").forEach((tab)=>{
+    tab.addEventListener("click",()=>{
+        try{
+            document.querySelector(".tabs div.active").classList.remove("active");
+            tab.classList.add("active");
+        } catch(err) {
+            console.log("active tab is not found please reload the page");
+        }
+    })
+})

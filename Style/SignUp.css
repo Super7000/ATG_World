@@ -142,6 +142,7 @@
     background: #2F6CE5;
     width: 100%;
     height: 2.5rem;
+    display: grid;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
@@ -150,7 +151,6 @@
     font-size: 0.875rem;
     margin: 1rem 0;
     cursor: pointer;
-    padding: 0.5rem 1rem;
 }
 
 .sign-up .submit-btn-container {
@@ -301,5 +301,10 @@
     .sign-up .submit-btn-container u {
         display: grid;
 
+    }
+
+    .sign-up .create-account-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 1.75rem;
     }
 }

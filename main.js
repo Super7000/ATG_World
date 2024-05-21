@@ -63,7 +63,7 @@ document.querySelector(".location-input-box").addEventListener("focusout", () =>
 })
 
 
-/* makeing appear of option box when 3 dot option btn is clicked in each post*/
+/* function to make appear of option box when 3 dot option btn is clicked in each post*/
 function clickHandlerForOptionBtns(optBtn) {
     if (optBtn.classList.toString().indexOf("active") != -1) {
         document.querySelector(".option-container").style.cssText = "display: none;";

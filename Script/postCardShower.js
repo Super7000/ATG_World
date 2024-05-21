@@ -18,7 +18,7 @@ export function showCards(data = {}) {
                     <div class="post-type bold-text">${postTypeIcon}${singlePostData.type}</div>
                     <div class="post-heading-container">
                         <div class="post-heading bold-text">${singlePostData.heading}</div>
-                        <div class="options-btn" onclick='clickHandlerForOptionBtns(event.target)'>
+                        <div class="options-btn" onclick='clickHandlerForOptionBtns(event.currentTarget)'>
                             <img src="Icons/threeDot.svg">
                         </div>
                     </div>

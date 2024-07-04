@@ -7,14 +7,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyA4q3zu1a7be2-uYV5EYhmbLQfXBFUFV3U",
-    authDomain: "hotel-management-bd585.firebaseapp.com",
-    databaseURL: "https://hotel-management-bd585-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "hotel-management-bd585",
-    storageBucket: "hotel-management-bd585.appspot.com",
-    messagingSenderId: "847871108243",
-    appId: "1:847871108243:web:3c175fcd0b4d54fe97d966",
-    measurementId: "G-6WMG38P9VB"
+    apiKey: "AIzaSyBnVzR20IsJikIq_3UHghsRqqe3DhnVKKk",
+    authDomain: "post-management-16801.firebaseapp.com",
+    databaseURL: "https://post-management-16801-default-rtdb.firebaseio.com",
+    projectId: "post-management-16801",
+    storageBucket: "post-management-16801.appspot.com",
+    messagingSenderId: "677238336820",
+    appId: "1:677238336820:web:979142453b8b18a36d4961",
+    measurementId: "G-M34B21W5P2"
 };
 
 // Initialize Firebase

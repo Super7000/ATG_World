@@ -10,6 +10,7 @@ function toggleSignUpPopup() {
 function toggleSignUp() {
     let signUpPopUp = document.querySelector(".sign-up-popup");
     if (signUpPopUp.classList.toString().indexOf("sign-up-mode") !== -1) {
+        // switching to log in mode
         signUpPopUp.classList.remove("sign-up-mode");
         signUpPopUp.classList.add("sign-in-mode");
 
@@ -25,6 +26,7 @@ function toggleSignUp() {
 
 
     } else {
+        // switching to sign up mode
         signUpPopUp.classList.add("sign-up-mode");
         signUpPopUp.classList.remove("sign-in-mode");
 

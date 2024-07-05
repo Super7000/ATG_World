@@ -1,0 +1,44 @@
+.sign-up-popup .sign-in-state {
+    text-align: center;
+    padding: 2rem 2.1rem;
+}
+
+.sign-up-popup .profile-details .user-details {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sign-up-popup .profile-details .user-details div {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.sign-in-state .profile-pic {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sign-in-state .profile-pic .pic {
+    background: lightcoral;
+    border-radius: 10rem;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2rem;
+    color: white
+}
+
+.sign-up-popup .profile-details {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.sign-in-state .log-out-btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.2)
+}

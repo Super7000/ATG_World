@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='Style/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='Style/SignUp.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Style/LogOut.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='Style/Card.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='Style/MenuBar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='Style/Tabs.css'>
@@ -18,6 +19,7 @@
     <script src='./Script/firebaseInitializer.js' type="module"></script>
     <script src='./Script/dataFetcher.js' type="module"></script>
     <script src='main.js' defer></script>
+    <script src='./Script/implementationOfAuth.js' type="module" defer></script>
 </head>
 
 <body>
@@ -88,7 +90,7 @@
                 <div class="spin"></div>
             </div>
             <!-- Card data will be showen here -->
-            
+
         </div>
         <div class="location-and-recommendation-container">
             <div class="location-container">
@@ -159,56 +161,78 @@
                 d="M10 0C4.47 0 0 4.47 0 10C0 15.53 4.47 20 10 20C15.53 20 20 15.53 20 10C20 4.47 15.53 0 10 0ZM15 13.59L13.59 15L10 11.41L6.41 15L5 13.59L8.59 10L5 6.41L6.41 5L10 8.59L13.59 5L15 6.41L11.41 10L15 13.59Z"
                 fill="#212529" />
         </svg>
-        <div class="sign-up-msg">Let's learn, share & inspire each other with our passion for computer engineering. Sign
-            up
-            now 🤘🏼</div>
-        <div class="sign-up-container">
-            <form class="sign-up">
-                <div class="sign-up-heading bold-text">Create Account</div>
-                <div class="sign-up-input-box-container">
-                    <div class="name-input-container">
-                        <input type="text" name="first-name" class="first-name sign-up-input-box"
-                            placeholder="First Name">
-                        <input type="text" name="last-name" class="last-name sign-up-input-box" placeholder="Last Name">
-                    </div>
-                    <input type="email" name="email" class="email sign-up-input-box" placeholder="Email">
-                    <div class="password-container">
-                        <input type="password" name="password" class="password sign-up-input-box"
-                            placeholder="Password">
-                        <div class="show-icon">
-                            <img src="Icons/eye.svg">
+        <div class="sign-out-state">
+            <div class="sign-up-msg">Let's learn, share & inspire each other with our passion for computer engineering.
+                Sign
+                up
+                now 🤘🏼</div>
+            <div class="sign-up-container">
+                <form class="sign-up">
+                    <div class="sign-up-heading bold-text">Create Account</div>
+                    <div class="sign-up-input-box-container">
+                        <div class="name-input-container">
+                            <input type="text" name="first-name" class="first-name sign-up-input-box"
+                                placeholder="First Name">
+                            <input type="text" name="last-name" class="last-name sign-up-input-box"
+                                placeholder="Last Name">
                         </div>
+                        <input type="email" name="email" class="email sign-up-input-box" placeholder="Email">
+                        <div class="password-container">
+                            <input type="password" name="password" class="password sign-up-input-box"
+                                placeholder="Password">
+                            <div class="show-icon">
+                                <img src="Icons/eye.svg">
+                            </div>
+                        </div>
+                        <input type="password" name="confirm-password" class="confirm-password sign-up-input-box"
+                            placeholder="Confirm Password">
                     </div>
-                    <input type="password" name="confirm-password" class="confirm-password sign-up-input-box"
-                        placeholder="Confirm Password">
-                </div>
-                <div class="submit-btn-container">
-                    <div class="create-account-btn">Create Account</div>
-                    <u>or, Sign In</u>
-                </div>
-                <div class="facebook-sign-up auth-sign-up">
-                    <img src="images/facebook.png">
-                    <div>Sign up with Facebook</div>
-                </div>
-                <div class="google-sign-up auth-sign-up">
-                    <img src="Icons/google.svg">
-                    <div>Sign up with Google</div>
-                </div>
-                <div class="forgot-password-link">Forgot Password?</div>
-                <div class="mobile privacy-policy-text">By signing up, you agree to our Terms & conditions, Privacy
-                    policy</div>
-            </form>
+                    <div class="submit-btn-container">
+                        <div class="create-account-btn">Create Account</div>
+                        <u>or, Sign In</u>
+                    </div>
+                    <div class="facebook-sign-up auth-sign-up">
+                        <img src="images/facebook.png">
+                        <div>Sign up with Facebook</div>
+                    </div>
+                    <div class="google-sign-up auth-sign-up">
+                        <img src="Icons/google.svg">
+                        <div>Sign up with Google</div>
+                    </div>
+                    <div class="forgot-password-link">Forgot Password?</div>
+                    <div class="mobile privacy-policy-text">By signing up, you agree to our Terms & conditions, Privacy
+                        policy</div>
+                </form>
 
-            <div class="sign-up-image-container">
-                <div class="sign-up-text sign-in-link"><span class="text">Already have an account?</span> <span
-                        class="sign-in-link-text bold-text">Sign In</span></div>
+                <div class="sign-up-image-container">
+                    <div class="sign-up-text sign-in-link"><span class="text">Already have an account?</span> <span
+                            class="sign-in-link-text bold-text">Sign In</span></div>
 
-                <img src="Icons/signUp.svg">
+                    <img src="Icons/signUp.svg">
 
-                <div class="privacy-policy-text">By signing up, you agree to our Terms & conditions, Privacy policy
+                    <div class="privacy-policy-text">By signing up, you agree to our Terms & conditions, Privacy policy
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="sign-in-state" style="display: none;">
+            <div class="profile-pic">
+                <div class="pic">S</div>
+            </div>
+            <div class="profile-details">
+                <div class="uid user-details">User ID: <div>User ID</div>
+                </div>
+                <div class="name user-details">Name: <div>User Name</div>
+                </div>
+                <div class="email user-details">Email: <div>User Email</div>
+                </div>
+            </div>
+            <div class="log-out-btn auth-sign-up">
+                <div>Log Out</div>
+                <img src="./Icons/leave.svg">
+            </div>
+        </div>
+
     </div>
     <div class="sign-up-popup-shadow"></div>
 </body>

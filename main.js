@@ -47,7 +47,7 @@ function customClickListener(arrayOfClassOfBtns, onClickFuntion) {
 
 }
 
-let arrayOfClassOfBtnsForSignUpPopUp = [".close-sign-up-icon", ".create-account-container", ".top-join-group-btn", ".create-post-btn", ".create-account-btn"];
+let arrayOfClassOfBtnsForSignUpPopUp = [".close-sign-up-icon", ".create-account-container", ".top-join-group-btn", ".create-post-btn"]; //, ".create-account-btn"];
 customClickListener(arrayOfClassOfBtnsForSignUpPopUp, toggleSignUpPopup)
 
 
@@ -95,11 +95,4 @@ document.querySelectorAll(".tabs div").forEach((tab) => {
             console.log("active tab is not found please reload the page");
         }
     })
-})
-
-/* after sign in style changes */
-document.querySelector(".create-account-btn").addEventListener("click", () => {
-    document.querySelector(".join-grp-btn div").innerHTML = "Leave Group";
-    document.querySelector(".join-grp-btn img").src = "Icons/leave.svg";
-    document.querySelector(".top-join-group-btn").innerHTML = "Leave Group";
 })

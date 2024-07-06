@@ -13,6 +13,12 @@ function signInFunc(user) {
     signUpPopUp.querySelector(".sign-in-state .profile-details .name div").innerHTML = user.providerData[0].displayName
     signUpPopUp.querySelector(".sign-in-state .profile-details .email div").innerHTML = user.providerData[0].email
     signUpPopUp.querySelector(".sign-in-state .profile-pic").innerHTML = `<img style="border-radius: 1rem" src="${user.providerData[0].photoURL}">`
+
+    // updating grp btn
+    document.querySelector(".join-grp-btn div").innerHTML = "Leave Group";
+    document.querySelector(".join-grp-btn img").src = "Icons/leave.svg";
+    document.querySelector(".top-join-group-btn").innerHTML = "Leave Group";
+    document.querySelector(".join-grp-btn").style.cssText = "background-color: white; color: grey; border: 2px solid grey;"
 }
 
 function signOutFunc() {
@@ -23,6 +29,13 @@ function signOutFunc() {
     document.querySelector(".menubar .account-container .bold-text").innerHTML = `Create account.<span style="color: #2F6CE5;">&nbsp;It’s
                     free!</span>
                 <img src="Icons/downArrow.svg">`
+
+
+    // updating grp btn
+    document.querySelector(".join-grp-btn div").innerHTML = "Join Group";
+    document.querySelector(".join-grp-btn img").src = "Icons/joinGroup.svg";
+    document.querySelector(".top-join-group-btn").innerHTML = "Join Group";
+    document.querySelector(".join-grp-btn").style.cssText = ""
 }
 
 customOnAuthStateChanged(signInFunc, signOutFunc)
@@ -34,14 +47,14 @@ document.querySelector(`.google-sign-up.auth-sign-up`).addEventListener('click',
 
 const signUpPopUp = document.querySelector(".sign-up-popup");
 signUpPopUp.querySelector(".create-account-btn").addEventListener('click', () => {
-    if (signUpPopUp.classList.toString().indexOf("sign-up-mode") !== -1) {
+    if (signUpPopUp.classList.toString().indexOf("sign-up-mode") === -1) {
         // log in mode
 
         //verifying inputs
         let email = signUpPopUp.querySelector(".email").value.trim();
         let password = signUpPopUp.querySelector(".password").value.trim();
         if (email === '' || password === '') {
-            alert("Please fill all the fields");
+            alert("Please fill all the fields to log in");
             return;
         }
 

@@ -24,7 +24,8 @@
     line-height: 100%;
     transition: 0.3s;
 }
-.tabs div.active{
+
+.tabs div.active {
     border-bottom: 1px solid #000000;
 }
 
@@ -71,6 +72,7 @@
     line-height: 100%;
     grid-auto-flow: column;
     color: #fff;
+    white-space: nowrap;
 }
 
 .btns .post-btn.filter-btn {

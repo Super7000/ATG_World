@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
 import {
     getAuth,
     signInWithPopup,
@@ -7,7 +7,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut
-} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
 
 import { firebaseConfig } from "./firebaseInitializer.js";
 const app = initializeApp(firebaseConfig);
@@ -23,7 +23,13 @@ const signUp = (email, password) => {
         })
         .catch((error) => {
             // Handle sign up errors
-            console.error('Sign up error:', error);
+            if (JSON.stringify(error).indexOf("auth/email-already-in-use") != -1)
+                alert("Email already in use.")
+            else if (JSON.stringify(error).indexOf("auth/weak-password") != -1)
+                alert("Password should be atleast 8 characters long.")
+            else
+                alert("Something went wrong. Please try again.")
+            console.log('Sign up error:', error);
         });
 };
 
@@ -36,10 +42,11 @@ const signIn = (email, password) => {
             console.log('User signed in:', user);
         })
         .catch((error) => {
+            alert("You entered wrong email or passward.")
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.error('Error Code:', errorCode);
-            console.error('Error Message:', errorMessage);
+            console.log('Error Code:', errorCode);
+            console.log('Error Message:', errorMessage);
         });
 };
 
@@ -53,10 +60,11 @@ const signUpWithoutCredentials = () => {
             console.log('User signed in with Google:', user);
         })
         .catch((error) => {
+            alert("Something went wrong. Please try again.")
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.error('Error Code:', errorCode);
-            console.error('Error Message:', errorMessage);
+            console.log('Error Code:', errorCode);
+            console.log('Error Message:', errorMessage);
         });
 };
 
@@ -66,7 +74,8 @@ const signOutUsingGoogle = () => {
         console.log('User signed out');
     }).catch((error) => {
         // An error happened.
-        console.error('Error signing out:', error);
+        alert("Something went wrong. Please try again.")
+        console.log('Error signing out:', error);
     });
 }
 
